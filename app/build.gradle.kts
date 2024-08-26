@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.abdullahalhakimi.smoothmotion"
+    namespace = "com.abdullahalhakimi.smoothmotion.sample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.abdullahalhakimi.smoothmotion"
+        applicationId = namespace
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,4 +66,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // import the library
+    implementation(project(":library"))
+
 }
