@@ -1,4 +1,4 @@
-# SmoothMotion
+# Smooth Motion
 
 SmoothMotion is a Kotlin library for simplifying animations and transitions in Jetpack Compose. It provides pre-built animations for common UI interactions and utility functions for implementing complex animations.
 
