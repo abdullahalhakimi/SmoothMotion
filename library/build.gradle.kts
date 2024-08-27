@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.abdullahalhakimi.library"
+    namespace = "com.abdullahalhakimi.smoothmotion"
     compileSdk = 34
 
     defaultConfig {
@@ -29,6 +29,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
 }
 
