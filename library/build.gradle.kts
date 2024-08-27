@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.abdullahalhakimi.smoothmotion"
+    namespace = "com.abdullahalhakimi.library"
     compileSdk = 34
 
     defaultConfig {
@@ -46,4 +46,9 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
+    implementation( libs.ui)
+    implementation( libs.androidx.animation)
+    implementation( libs.ui.tooling.preview)
+    androidTestImplementation( libs.androidx.espresso.core.v351)
+    debugImplementation( libs.ui.tooling)
 }
