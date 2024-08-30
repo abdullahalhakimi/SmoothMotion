@@ -12,10 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 @Composable
@@ -28,10 +31,12 @@ fun AnimatedButton(
     padding: Int = 16,
     content: @Composable () -> Unit
 ) {
+    val scope = rememberCoroutineScope()
     var isPressed by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(
         targetValue = if (isPressed) scaleDownValue else 1f,
-        animationSpec = tween(durationMillis = animationDuration)
+        animationSpec = tween(durationMillis = animationDuration),
+        label = "AnimatedButton",
     )
 
     Surface(
@@ -41,6 +46,9 @@ fun AnimatedButton(
                 onClick = {
                     isPressed = true
                     onClick()
+                    scope.launch {
+                        delay(1000)
+                    }
                     isPressed = false
                 }
             ),
