@@ -1,6 +1,7 @@
 package com.abdullahalhakimi.smoothmotion
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import com.abdullahalhakimi.smoothmotion.animations.AnimatedButton
+import com.abdullahalhakimi.smoothmotion.animations.AppLoadingAnimation
 import com.abdullahalhakimi.smoothmotion.animations.ExpandingCard
 import com.abdullahalhakimi.smoothmotion.animations.PulsatingLoadingIndicator
 import com.abdullahalhakimi.smoothmotion.animations.RotatingIcon
@@ -44,10 +46,13 @@ fun ExampleMainActivityContent() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        Spacer(modifier = Modifier.height(10.dp))
         // AnimatedButton Example
         AnimatedButton(
-            onClick = { /* Do something */ },
-            modifier = Modifier.fillMaxWidth()
+            onClick = {
+                Log.d("A:","Ali")
+            },
+            modifier = Modifier,
         ) {
             Text("Animated Button")
         }
@@ -77,6 +82,8 @@ fun ExampleMainActivityContent() {
             icon = { Icon(Icons.Default.Refresh, contentDescription = "Rotating Icon") },
             color = Color.Blue
         )
+
+        AppLoadingAnimation()
     }
 }
 
