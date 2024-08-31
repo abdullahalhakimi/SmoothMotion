@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
 @Composable
-fun AppLoadingAnimation(
+fun LoadingDotsAnimation(
     modifier: Modifier = Modifier,
     circleSize: Dp = 20.dp,
     spaceBetween: Dp = 10.dp,

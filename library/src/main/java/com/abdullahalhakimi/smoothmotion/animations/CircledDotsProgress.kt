@@ -21,9 +21,9 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 @Composable
-fun DroppingDotsProgress(
+fun CircledDotsProgress(
     backgroundColor: Color,
-    activeColor: Color,
+    color: Color,
     modifier: Modifier = Modifier,
     pathWidth: Dp = 6.dp,
     duration: Int = 1500
@@ -90,7 +90,7 @@ fun DroppingDotsProgress(
             )
         )
         drawArc(
-            color = activeColor,
+            color = color,
             startAngle = bigArcStartAngle.value,
             sweepAngle = bigCircleSweepAngle,
             style = Stroke(
@@ -102,7 +102,7 @@ fun DroppingDotsProgress(
         if (isSmallArcsVisible.value) {
             smallArcsStartAngle.forEachIndexed { _, startAngel ->
                 drawArc(
-                    color = activeColor,
+                    color = color,
                     startAngle = (startAngel + smallArcsStartAngleProgress.value * (175f - startAngel)),
                     sweepAngle = smallArcsSweepAngle,
                     style = Stroke(

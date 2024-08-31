@@ -22,8 +22,8 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 @Composable
-fun AnimatingArcsProgress(
-    activeColor: Color,
+fun RotatingCircleProgress(
+    color: Color,
     modifier: Modifier = Modifier,
     arcsWidth: Dp = 4.dp,
     arcsLayerPadding: Dp = 16.dp,
@@ -84,7 +84,7 @@ fun AnimatingArcsProgress(
     Box(modifier = modifier) {
         Canvas(modifier = Modifier.fillMaxSize().rotate(canvasRotation.value)) {
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = outerArcsStartAngleProgress.value * arcSweepOffset,
                 sweepAngle = outerArcsSweepProgress.value * arcSweepOffset,
                 useCenter = false,
@@ -95,7 +95,7 @@ fun AnimatingArcsProgress(
             )
 
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = 180f + outerArcsStartAngleProgress.value * arcSweepOffset,
                 sweepAngle = outerArcsSweepProgress.value * arcSweepOffset,
                 useCenter = false,
@@ -110,7 +110,7 @@ fun AnimatingArcsProgress(
             modifier = Modifier.fillMaxSize().padding(arcsLayerPadding).rotate(canvasRotation.value)
         ) {
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = arcSweepOffset + outerArcsStartAngleProgress.value * arcSweepOffset,
                 sweepAngle = outerArcsSweepProgress.value * arcSweepOffset,
                 useCenter = false,
@@ -120,7 +120,7 @@ fun AnimatingArcsProgress(
                 )
             )
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = 270f + outerArcsStartAngleProgress.value * arcSweepOffset,
                 sweepAngle = outerArcsSweepProgress.value * arcSweepOffset,
                 useCenter = false,
@@ -135,7 +135,7 @@ fun AnimatingArcsProgress(
             val radius = size.width / 2
             drawCircle(
                 alpha = innerCircleRadiusProgress.value,
-                color = activeColor,
+                color = color,
                 radius = radius * innerCircleRadiusProgress.value,
                 style = Stroke(
                     width = arcsWidthInPx,
