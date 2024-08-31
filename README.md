@@ -2,13 +2,6 @@
 
 SmoothMotion is a Kotlin library for simplifying animations and transitions in Jetpack Compose. It provides pre-built animations for common UI interactions and utility functions for implementing complex animations.
 
-## Features
-- Button press animations
-- Page transitions (slide, fade, zoom)
-- Loading indicators
-- Expandable cards
-- Rotation animations
-
 ## Installation
 Add SmoothMotion to your project:
 
@@ -21,47 +14,63 @@ dependencies {
 
 ## Examples
 
-### Animated Button
+### Drop Circle Progress
 ```kotlin
-AnimatedButton(
-    onClick = { /* Handle click */ },
-    scaleDownValue = 0.9f, //Controls the scale of the button when pressed (default: 0.95f).
-    animationDuration = 500, //Controls the duration of the press animation (default: 300ms).
-) {
-    Text(text = "Custom Button")
-}
-```
-
-### Rotating Icon
-```kotlin
-RotatingIcon(
-    modifier = Modifier.size(80.dp),
-    icon = { Icon(Icons.Default.Refresh, contentDescription = "Refreshing", tint = Color.White) },
-    color = Color.Blue,
-    rotationDuration = 1500
+DropCircleProgress(
+    modifier = Modifier.size(90.dp),
+    backgroundColor = Color.Gray.copy(alpha = 0.2f),
+    color = MaterialTheme.colorScheme.primary,
 )
 ```
 
-### Expanding Card
+### Circled Dots Progress
 ```kotlin
-ExpandingCard(
-    headerContent = { Text("Expanding Card Header") },
-    expandedContent = { Text("This is the expanded content of the card.") },
-    isExpanded = isExpanded,
-    onClick = { isExpanded = !isExpanded }
+CircledDotsProgress(
+    modifier = Modifier.size(90.dp),
+    backgroundColor = Color.Gray.copy(alpha = 0.2f),
+    color = MaterialTheme.colorScheme.primary,
 )
 ```
 
-### Slide Transition
+### Rotating Circle Progress 
 ```kotlin
-SlideTransition(targetState = showSlide) {
-    Text("Slide In Content", modifier = Modifier.padding(16.dp))
-}
-Button(onClick = { showSlide = !showSlide }) {
-    Text(if (showSlide) "Hide Slide" else "Show Slide")
-}
+RotatingCircleProgress(
+    modifier = Modifier.size(90.dp),
+    color = MaterialTheme.colorScheme.primary
+)
 ```
 
+### Rotating Filled Circle Progress
+```kotlin
+RotatingFilledCircleProgress(
+    modifier = Modifier.size(90.dp),
+    color = MaterialTheme.colorScheme.primary
+)
+```
+
+### Loading DotsAnimation 
+```kotlin
+LoadingDotsAnimation(
+    circleSize = 20.dp,
+    spaceBetween = 10.dp,
+    travelDistance = 15.dp,
+    circleColor = MaterialTheme.colorScheme.primary
+)
+```
+
+### Outlined Loading Dots Animation 
+```kotlin
+OutlinedLoadingDotsAnimation(
+    color = MaterialTheme.colorScheme.primary
+)
+```
+
+## ✨ Requirements
+* Any IDE with SDK installed (ie.  Android Studio, VSCode, IntelliJ, etc)
+* A little knowledge of Kotlin and Jetpack Compose.
+* A brain to think 🤓🤓
 
 
-### Copyright 2024 Abdullah Al-Hakimi.
+
+
+  
