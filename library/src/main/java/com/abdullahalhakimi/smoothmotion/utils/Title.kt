@@ -10,11 +10,11 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ProgressTitle(modifier: Modifier = Modifier, title: String) {
+fun Title(modifier: Modifier = Modifier, title: String) {
     Text(
         modifier = modifier.padding(top = 15.dp),
         text = title,
         color = MaterialTheme.colorScheme.onBackground,
-        fontSize = TextUnit(16f, TextUnitType.Sp)
+        fontSize = TextUnit(14f, TextUnitType.Sp)
     )
 }

@@ -23,8 +23,8 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 @Composable
-fun AnimatingCircleWithArcsProgress(
-    activeColor: Color,
+fun RotatingFilledCircleProgress(
+    color: Color,
     modifier: Modifier = Modifier,
     outerArcsWidth: Dp = 4.dp,
     innerCircleAnimationDuration: Int = 2000
@@ -99,13 +99,13 @@ fun AnimatingCircleWithArcsProgress(
         Canvas(modifier = Modifier.fillMaxSize().padding(8.dp)) {
             val radius = size.width / 2
             drawCircle(
-                color = activeColor,
+                color = color,
                 radius = radius * innerCircleRadiusProgress.value
             )
         }
         Canvas(modifier = Modifier.fillMaxSize().rotate(arcsCanvasRotation.value)) {
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = arcsStartAngles.first() + outerArcsStartAngle.value * (sweepAngle - arcsStartAngles.first()),
                 sweepAngle = sweepAngle * outerArcsSweepProgress.value,
                 useCenter = false,
@@ -115,7 +115,7 @@ fun AnimatingCircleWithArcsProgress(
                 )
             )
             drawArc(
-                color = activeColor,
+                color = color,
                 startAngle = arcsStartAngles[1] + outerArcsStartAngle.value * (arcsStartAngles[1] - sweepAngle),
                 sweepAngle = sweepAngle * outerArcsSweepProgress.value,
                 useCenter = false,
