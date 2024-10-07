@@ -5,12 +5,24 @@ SmoothMotion is a Kotlin library for simplifying animations and transitions in J
 https://github.com/user-attachments/assets/68e449a0-e938-4598-a290-958ba33e150a
 
 ## Installation
-Add SmoothMotion to your project:
+Add the JitPack repository to your settings.gradle.kts
 
-### Gradle
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+
+###  Add the dependency to your build.gradle.kts
 ```gradle
 dependencies {
-    implementation "com.abdullahalhakimi:smoothmotion:1.0.0"
+    implementation ("com.github.abdullahalhakimi:SmoothMotion:1.0.1")
 }
 ```
 
