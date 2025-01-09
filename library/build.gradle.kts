@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -38,6 +39,16 @@ android {
     }
 }
 
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -52,9 +63,9 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
-    implementation( libs.ui)
-    implementation( libs.androidx.animation)
-    implementation( libs.ui.tooling.preview)
-    androidTestImplementation( libs.androidx.espresso.core.v351)
-    debugImplementation( libs.ui.tooling)
+    implementation(libs.ui)
+    implementation(libs.androidx.animation)
+    implementation(libs.ui.tooling.preview)
+    androidTestImplementation(libs.androidx.espresso.core.v351)
+    debugImplementation(libs.ui.tooling)
 }
