@@ -1,8 +1,28 @@
-# Smooth Motion
+# SmoothMotion 🚀
 
-SmoothMotion is a Kotlin library for simplifying animations and transitions in Jetpack Compose. It provides pre-built animations for common UI interactions and utility functions for implementing complex animations.
+SmoothMotion is a **Kotlin library for Jetpack Compose** that makes animations and transitions effortless.  
+It provides **pre-built animations for common UI interactions** and **utility functions for complex effects** — so you can focus on building beautiful UIs faster.  
+
+[![GitHub stars](https://img.shields.io/github/stars/abdullahalhakimi/SmoothMotion?style=social)](https://github.com/abdullahalhakimi/SmoothMotion/stargazers)
+[![JitPack](https://jitpack.io/v/abdullahalhakimi/SmoothMotion.svg)](https://jitpack.io/#abdullahalhakimi/SmoothMotion)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/abdullahalhakimi/SmoothMotion/pulls)
+
+---
+
+## ✨ Features
+- 🎬 Ready-to-use loading & progress animations  
+- ⚡ Built for **Jetpack Compose** — clean & modern API  
+- 🎨 Customizable colors, sizes, and speeds  
+- 🪶 Lightweight, no unnecessary dependencies  
+- 🔧 Utility functions for advanced motion  
+
+---
+
+## 📸 Demo
 
 https://github.com/user-attachments/assets/68e449a0-e938-4598-a290-958ba33e150a
+
 
 ## Installation
 Add the JitPack repository to your settings.gradle.kts
@@ -85,3 +105,5 @@ OutlinedLoadingDotsAnimation(
 * A brain to think 🤓🤓
 
 
+## 📄 License
+This project is licensed under the [Apache License 2.0](LICENSE).  
