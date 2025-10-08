@@ -13,9 +13,7 @@ activityCompose = "1.9.1"
 composeBom = "2024.08.00"
 appcompat = "1.7.0"
 material = "1.12.0"
-smoothmotion = "1.0.1"
 ui = "1.6.8"
-uiTestJunit4 = "1.6.8"
 uiTooling = "1.6.8"
 uiToolingPreview = "1.6.8"
 
@@ -23,7 +21,6 @@ uiToolingPreview = "1.6.8"
 androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
-androidx-junit-v115 = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -39,9 +36,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-smoothmotion = { module = "com.github.abdullahalhakimi:SmoothMotion", version.ref = "smoothmotion" }
 ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiTestJunit4" }
 ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 

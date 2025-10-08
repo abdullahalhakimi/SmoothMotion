@@ -68,7 +68,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // import the library
-    //implementation(project(":library"))
-    implementation (libs.smoothmotion)
+    implementation(project(":library"))
 
 }

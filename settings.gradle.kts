@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmoothMotion"
 include(":app")
-//include(":library")
+include(":library")
