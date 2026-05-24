@@ -1,4 +1,4 @@
-package com.abdullahalhakimi.smoothmotion.ui.theme
+package com.abdullahalhakimi.smoothmotion.sample.ui.theme
 
 import android.app.Activity
 import android.os.Build

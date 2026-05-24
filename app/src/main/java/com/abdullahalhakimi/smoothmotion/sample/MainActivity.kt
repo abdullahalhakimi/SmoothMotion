@@ -1,4 +1,4 @@
-package com.abdullahalhakimi.smoothmotion
+package com.abdullahalhakimi.smoothmotion.sample
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -28,6 +28,7 @@ import com.abdullahalhakimi.smoothmotion.animations.LoadingDotsAnimation
 import com.abdullahalhakimi.smoothmotion.animations.OutlinedLoadingDotsAnimation
 import com.abdullahalhakimi.smoothmotion.animations.RotatingCircleProgress
 import com.abdullahalhakimi.smoothmotion.animations.RotatingFilledCircleProgress
+import com.abdullahalhakimi.smoothmotion.sample.ui.theme.SmoothMotionTheme
 import com.abdullahalhakimi.smoothmotion.utils.Title
 
 class MainActivity : ComponentActivity() {
@@ -36,7 +37,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ExampleMainActivityContent(modifier = Modifier)
+            SmoothMotionTheme {
+                ExampleMainActivityContent(modifier = Modifier)
+            }
         }
     }
 }

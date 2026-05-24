@@ -1,4 +1,4 @@
-package com.abdullahalhakimi.smoothmotion.ui.theme
+package com.abdullahalhakimi.smoothmotion.sample.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
