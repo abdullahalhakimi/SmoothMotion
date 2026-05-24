@@ -1,9 +1,10 @@
 [versions]
-agp = "8.5.2"
+agp = "8.13.2"
 androidxJunit = "1.2.1"
 animation = "1.6.8"
 espressoCoreVersion = "3.6.1"
 kotlin = "1.9.22"
+compose-multiplatform = "1.6.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -44,4 +45,6 @@ ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", versio
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 
