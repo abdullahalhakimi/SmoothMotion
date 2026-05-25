@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SmoothMotion"
         tools:targetApi="31">
         <activity
-            android:name="com.abdullahalhakimi.smoothmotion.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.SmoothMotion">
             <intent-filter>
