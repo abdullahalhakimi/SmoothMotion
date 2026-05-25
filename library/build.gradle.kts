@@ -6,6 +6,9 @@ plugins {
     id("maven-publish")
 }
 
+group = "com.abdullahalhakimi"
+version = "1.0.0"
+
 kotlin {
     android {
         namespace = "com.abdullahalhakimi.smoothmotion"
@@ -38,5 +41,12 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
+    }
+}
+
+publishing {
+    publications {
+        // This is not needed for KMP as it auto-generates publications for each target
+        // but can be used for additional configuration if needed.
     }
 }
